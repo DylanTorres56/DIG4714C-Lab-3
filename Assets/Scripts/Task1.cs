@@ -5,6 +5,8 @@ using UnityEngine;
 public class Task1 : MonoBehaviour
 {
     [SerializeField]
+    string courseName;
+    [SerializeField]
     int numModules, numReadings, numQuizzes, numAssignments;
     [SerializeField]
     bool hasTaught;

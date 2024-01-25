@@ -21,17 +21,13 @@ public class Task1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score = (ScoreCalculator(numModules, moduleWeight) + ScoreCalculator(numReadings, readingWeight) + ScoreCalculator(numQuizzes, quizWeight) + ScoreCalculator(numAssignments, assignmentWeight) + (Convert.ToInt32(!hasTaught) * 0.10f))*10;
+        //math for creating the total difficulty
+        score = (DifficultyWeightCalculator(numModules, moduleWeight) + DifficultyWeightCalculator(numReadings, readingWeight) + DifficultyWeightCalculator(numQuizzes, quizWeight) + DifficultyWeightCalculator(numAssignments, assignmentWeight) + (Convert.ToInt32(!hasTaught) * 0.10f))*10;
         print("Course Name: "+courseName+" | Diffuclty: "+ score.ToString("0.0"));
     }
-    float ScoreCalculator(int number, float weight)
+    //basic calculation of the difficulty Weight of each group
+    float DifficultyWeightCalculator(int number, float weight)
     {
         return ((float)number/maxWeeks)*weight;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

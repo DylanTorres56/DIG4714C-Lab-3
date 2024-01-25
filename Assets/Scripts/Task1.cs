@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Task1 : MonoBehaviour
 {
+    [SerializeField]
+    int numModules, numReadings, numQuizzes, numAssignments;
+    [SerializeField]
+    bool hasTaught;
+
+    int score=0;
     // Start is called before the first frame update
     void Start()
     {

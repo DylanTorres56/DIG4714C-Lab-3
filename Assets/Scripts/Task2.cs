@@ -31,10 +31,12 @@ public class Task2 : MonoBehaviour
         float discount = .4f;
         float shippingCost = 0f;
 
+        //Total Final Cost = coverPrice * numberOfCopies 
         float totalFinalCost = x * y;
 
         if (y > 0) 
         {
+            //Shipping Cost total is calculated based on which copy is sold, then the sum of all copies with different discounts is found
             shippingCost = (x * discount) + 3;
             if (y > 1) 
             {
@@ -42,28 +44,10 @@ public class Task2 : MonoBehaviour
             }
         }
 
-
+        //totalProfit is the difference between how many copies were sold before the fees and the total shipping cost
         float totalProfit = totalFinalCost - shippingCost;
-        print("Total Wholesale Cost: $" + shippingCost.ToString("0.00") + " | Total Profit: $" + totalProfit.ToString("0.00"));
 
-        //For the first book shipped, shippingCost is $3.00. Otherwise, shippingCost is $0.75
-        //for (int i = 0; i < y; i++) 
-        //{            
-        //    if (i = 0) 
-        //    {
-        //        shippingCost = 3.0f;
-        //    }
-        //    else 
-        //    {
-        //        shippingCost = 0.75f;
-        //    }
-
-        //    //finalCost = x - (x*discount) - shippingCost;
-
-
-        //}
-
-        //return totalWholesaleCost, totalProfit;
+        print("Total Wholesale Cost: $" + shippingCost.ToString("0.00") + " | Total Profit: $" + totalProfit.ToString("0.00"));        
 
     }
 

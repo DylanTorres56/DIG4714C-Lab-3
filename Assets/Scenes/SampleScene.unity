@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d633e819737d7424a9e14198292b0256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
 --- !u!4 &370276161
 Transform:
   m_ObjectHideFlags: 0
@@ -338,6 +339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280ad6c42724b7a4fb37a913a17a29a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coverPrice: 8
+  numberOfCopies: 13
 --- !u!4 &1131316916
 Transform:
   m_ObjectHideFlags: 0
